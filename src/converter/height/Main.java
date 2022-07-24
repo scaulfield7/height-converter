@@ -10,10 +10,10 @@ public class Main {
 		conversion = input.next();
 
 		if(conversion.equals("c")){
-			converter.convertToFeetAndInches();
+			converter.convertToCm();
 		}
 		else if(conversion.equals("f")){
-			converter.convertToCm();
+			converter.convertToFeetAndInches();
 		}
     }
 }
