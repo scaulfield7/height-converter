@@ -1,8 +1,8 @@
 package converter.height;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class Main{
+    public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 	    char conversion;
 		Converter converter = new Converter();
@@ -11,9 +11,19 @@ public class Main {
 
 		if(conversion == 'c'){
 			converter.convertToCm();
-		}
-		else if(conversion == 'f'){
+		}else if(conversion == 'f'){
 			converter.convertToFeetAndInches();
+		}
+		else{
+			while(conversion != 'c' && conversion != 'f'){
+				System.out.println("Try again! Enter \"c\" to convert to centimetres, or \"f\" to convert to feet and inches.");
+				conversion = input.next().charAt(0);
+				if(conversion == 'c') {
+					converter.convertToCm();
+				}else if(conversion == 'f'){
+					converter.convertToFeetAndInches();
+				}
+			}
 		}
     }
 }
