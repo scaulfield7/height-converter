@@ -16,7 +16,7 @@ public class Converter {
     public Converter(){
 
     }
-    public void convertToFeetAndInches(){
+    public void convertToCm(){
         System.out.print("Enter the height. First enter the number of feet: ");
         heightInFeet = input.nextDouble();
         System.out.print("Then enter the number of inches: ");
@@ -26,7 +26,7 @@ public class Converter {
         System.out.println(df.format(heightInFeet) + "'" + df.format(heightInInches) + "\" equals " + df.format(heightConvertedToCm) + "cm.");
     }
 
-    public void convertToCm(){
+    public void convertToFeetAndInches(){
         System.out.print("Enter the height in centimetres: ");
         heightInCm = input.nextDouble();
         totalHeightInInches = heightInCm/2.54;
